@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2f7, #f7f9fc);
+}
+
+/* =========================
+   CENTER CONTAINER
+========================= */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+.login-container form {
+  background: #ffffff;
+  padding: 30px;
+  width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   TITLE
+========================= */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* =========================
+   FORM FIELDS
+========================= */
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 5px rgba(25, 118, 210, 0.3);
+}
+
+/* =========================
+   FIRST NAME / LAST NAME ROW
+========================= */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row .form-group {
+  flex: 1;
+}
+
+/* =========================
+   BUTTON CONTAINER
+========================= */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* =========================
+   REGISTER BUTTON (PRIMARY)
+========================= */
+.login-container button.register-btn {
+  flex: 2;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #1976d2 !important;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container button.register-btn:hover {
+  background: #1565c0 !important;
+}
+
+/* =========================
+   BACK BUTTON (SECONDARY)
+========================= */
+.login-container button.back-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #e0e0e0 !important;
+  color: #333;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container button.back-btn:hover {
+  background: #cfcfcf !important;
+}
+
+/* =========================
+   GLOBAL SAFETY RESET (IMPORTANT)
+   prevents gray override issue
+========================= */
+.login-container button {
+  font-family: inherit;
+  background: unset;
+}

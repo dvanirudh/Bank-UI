@@ -1,0 +1,140 @@
+<div class="button-container">
+
+    <button
+            mat-raised-button
+            class="account-btn"
+            (click)="showAccount()">
+
+        View Account
+
+    </button>
+
+    <button
+            mat-raised-button
+            class="balance-btn"
+            (click)="showBalance()">
+
+        Check Balance
+
+    </button>
+
+    <button
+            mat-raised-button
+            class="transaction-btn"
+            (click)="showTransactions()">
+
+        View Transactions
+
+    </button>
+
+</div>
+
+<!-- ================= ACCOUNT ================= -->
+
+<div
+        class="card"
+        *ngIf="selectedAction === 'account'">
+
+    <h2>View Account Details</h2>
+
+    <label>User ID</label>
+
+    <input
+            type="number"
+            [(ngModel)]="accountId"
+            placeholder="Enter User ID">
+
+    <button
+            mat-raised-button
+            class="search-btn"
+            (click)="searchAccount()">
+
+        Search Account
+
+    </button>
+
+</div>
+
+<!-- ================= BALANCE ================= -->
+
+<div
+        class="card"
+        *ngIf="selectedAction === 'balance'">
+
+    <h2>Check Account Balance</h2>
+
+    <label>Account Number</label>
+
+    <input
+            type="number"
+            [(ngModel)]="accountNumber"
+            placeholder="Enter Account Number">
+
+    <button
+            mat-raised-button
+            class="search-btn"
+            (click)="searchBalance()">
+
+        Check Balance
+
+    </button>
+
+</div>
+
+<!-- ================= TRANSACTIONS ================= -->
+
+<div
+        class="card"
+        *ngIf="selectedAction === 'transactions'">
+
+    <h2>View Last Transactions</h2>
+
+    <label>Account Number</label>
+
+    <input
+            type="number"
+            [(ngModel)]="accountNumber"
+            placeholder="Enter Account Number">
+
+    <button
+            mat-raised-button
+            class="search-btn"
+            (click)="searchTransactions()">
+
+        View Transactions
+
+    </button>
+
+</div>
+
+<!-- ================= RESULTS ================= -->
+
+<div
+        class="result-card"
+        *ngIf="account">
+
+    <h2>Account Details</h2>
+
+    <pre>{{ account | json }}</pre>
+
+</div>
+
+<div
+        class="result-card"
+        *ngIf="balance">
+
+    <h2>Balance Details</h2>
+
+    <pre>{{ balance | json }}</pre>
+
+</div>
+
+<div
+        class="result-card"
+        *ngIf="transactions">
+
+    <h2>Transaction Details</h2>
+
+    <pre>{{ transactions | json }}</pre>
+
+</div>
